@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
@@ -11,7 +12,7 @@
 <body>
     <h1 id="title">Microverse Survey Form</h1>
     <p id="description">Thank you for taking the time to help us improve the platform</p>
-    <div>
+    <div > 
         <form action="" id="survey-form">
             <label for="name">Name</label><br>
             <input type="text" id="name-label" name="name" value="Enter your name"><br>
@@ -28,15 +29,31 @@
                 <option value="prefer-not-to-say">Prefer not to say</option>
                 <option value="other">Other</option>
             </select><br><br>
-            <label for="recommend">Would you recommend Microverse to a friend?</label><br>
-            <input type="radio" id="definitely" name="definitely" value="Definitely">
-            <label for="definitely">Definitely</label><br>
-            <input type="radio" id="maybe" name="maybe" value="maybe">
-            <label for="maybe">Maybe</label><br>
-            <input type="radio" id="not-sure" name="not-sure" value="Not sure">
-            <label for="not-sure">Not sure</label><br><br>
+            <div class="radio-btn">
+                <label for="recommend">Would you recommend Microverse to a friend?</label><br>
+                <input type="radio" id="definitely" name="definitely" value="Definitely">
+                <label for="definitely">Definitely</label><br>
+                <input type="radio" id="maybe" name="maybe" value="maybe">
+                <label for="maybe">Maybe</label><br>
+                <input type="radio" id="not-sure" name="not-sure" value="Not sure">
+                <label for="not-sure">Not sure</label><br><br>
+            </div>
+            
 
-            <label for="recommend">What would you like to see improved? (Check all that apply)</label><br>
+            <div>
+                <p>What is your favorite feature of freeCodeCamp?</p>
+                <select name="feature" id="dropdown">
+                    <option value="feature">Select an option</option>
+                    <option value="feature">Challengs</option>
+                    <option value="feature">Project</option>
+                    <option value="feature">Community</option>
+                    <option value="feature">Open Source</option>
+                   
+                </select class="radio-btn"><br><br>
+            </div>
+
+            <div class="check-btn">
+                <label for="recommend">What would you like to see improved? (Check all that apply)</label><br>
             <input type="checkbox" id="front-end" name="front-end" value="Front-end-Projects">
             <label for="Front-end-Projects">Front-end Projects</label><br>
             <input type="checkbox" id="Back-end-Projects" name="Back-end-Projects" value="Back-end Projects">
@@ -59,10 +76,13 @@
             <input type="checkbox" id="Forum" name="Forum" value="Forum">
             <label for="Additional Courses">Additional Courses</label><br>
 
+            </div>
+            <br>
             <label for="comment">Any comments or suggestions?</label><br>
-            <textarea type="text" class="input" placeholder="Write a comment"></textarea><br>
-
-            <input type="submit" value="Submit">
+            <br>
+            <textarea type="text" class="input" placeholder="Enter your comment here..."></textarea><br>
+            <br>
+            <input type="submit" value="Submit" class="submit-btn">
         </form>
     </div>
 </body>
